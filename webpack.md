@@ -75,23 +75,23 @@ module.exports = {<br/>
   ```npm install --save-dev babel-core babel-loader babel-preset-env babel-preset-react ```
 # CSS module
   只需要在CSS loader中进行简单配置即可，然后就可以直接把CSS的类名传递到组件的代码中，这样做有效避免了全局污染
-   ```{
+   {
         loader: "css-loader",
         options: {
             modules: true, // 指定启用css modules
             localIdentName: '[name]__[local]--[hash:base64:5]' // 指定css的类名格式
-    } ```
+    }
 # CSS预处理器
   ``` npm install --save-dev postcss-loader autoprefixer ```
 # 插件（Plugins）
   要使用某个插件，我们需要通过npm安装它，然后要做的就是在webpack配置中的plugins关键字部分添加该插件的一个实例（plugins是一个数组），添加了一个给打包后代码添加版权声明的插件。
-    ``` plugins: [
+    plugins: [
         new webpack.BannerPlugin('版权所有，翻版必究')
-    ] ```<br/>
+    ]
  下面给大家推荐几个常用的插件<br/>
 
   HtmlWebpackPlugin:这个插件的作用是依据一个简单的index.html模板，生成一个自动引用你打包后的JS文件的新index.html。
-   ```npm install --save-dev html-webpack-plugin```<br/>
+   ```npm install --save-dev html-webpack-plugin```
 
   Hot Module Replacement:是webpack里很有用的一个插件，它允许你在修改组件代码后，自动刷新实时预览修改后的效果
   
